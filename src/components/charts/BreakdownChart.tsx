@@ -76,7 +76,7 @@ export default function BreakdownChart({
                 })}
               </Pie>
               <Tooltip
-                formatter={(v: number) => `$${v.toLocaleString()}`}
+                formatter={(v) => `$${Number(v).toLocaleString()}`}
                 contentStyle={{ borderRadius: 12, border: "1px solid #e4e4e7", fontSize: 12 }}
               />
               <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 12, color: "#71717a" }} />
@@ -87,7 +87,7 @@ export default function BreakdownChart({
               <XAxis type="number" tick={{ fontSize: 12, fill: "#71717a" }} axisLine={false} tickLine={false} tickFormatter={(v) => `$${v / 1000}K`} />
               <YAxis type="category" dataKey="name" width={100} tick={{ fontSize: 12, fill: "#71717a" }} axisLine={false} tickLine={false} />
               <Tooltip
-                formatter={(v: number) => `$${v.toLocaleString()}`}
+                formatter={(v) => `$${Number(v).toLocaleString()}`}
                 contentStyle={{ borderRadius: 12, border: "1px solid #e4e4e7", fontSize: 12 }}
                 cursor={{ fill: "#f4f4f5" }}
               />
