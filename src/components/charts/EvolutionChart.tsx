@@ -39,7 +39,7 @@ export default function EvolutionChart() {
           <XAxis dataKey="mes" tick={{ fontSize: 12, fill: "#71717a" }} axisLine={false} tickLine={false} />
           <YAxis tick={{ fontSize: 12, fill: "#71717a" }} axisLine={false} tickLine={false} tickFormatter={(v) => `$${v / 1000}K`} />
           <Tooltip
-            formatter={(v: number) => `$${v.toLocaleString()}`}
+            formatter={(v) => `$${Number(v ?? 0).toLocaleString()}`}
             contentStyle={{ borderRadius: 12, border: "1px solid #e4e4e7", fontSize: 12 }}
           />
           <Legend verticalAlign="top" align="center" wrapperStyle={{ fontSize: 12, top: 0 }} />

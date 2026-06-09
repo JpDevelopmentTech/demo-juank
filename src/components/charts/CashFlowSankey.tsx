@@ -55,7 +55,7 @@ export default function CashFlowSankey() {
           link={{ stroke: "#a1a1aa", strokeOpacity: 0.25 }}
         >
           <Tooltip
-            formatter={(v: number) => `$${v.toLocaleString()}`}
+            formatter={(v) => `$${Number(v ?? 0).toLocaleString()}`}
             contentStyle={{ borderRadius: 12, border: "1px solid #e4e4e7", fontSize: 12 }}
           />
         </Sankey>

@@ -137,7 +137,7 @@ const marginByQ = [
   { q: "Q3 2026", margin: -22.4 },
   { q: "Q4 2026", margin: 34.8 },
 ];
-const marginTone = (m: number) => (m >= 30 ? "green" : m >= 0 ? "amber" : "red") as const;
+const marginTone = (m: number): "green" | "amber" | "red" => (m >= 30 ? "green" : m >= 0 ? "amber" : "red");
 const marginText: Record<"green" | "amber" | "red", string> = {
   green: "text-emerald-600 dark:text-emerald-400",
   amber: "text-amber-500 dark:text-amber-400",
@@ -229,7 +229,7 @@ export function PayrollReport() {
                 <Pie data={payrollByCategory} dataKey="value" nameKey="name" innerRadius={70} outerRadius={100} paddingAngle={2}>
                   {payrollByCategory.map((_, i) => <Cell key={i} fill={donutColors[i % donutColors.length]} />)}
                 </Pie>
-                <Tooltip {...tooltipStyle} formatter={(v: number) => `$${v.toLocaleString()}`} />
+                <Tooltip {...tooltipStyle} formatter={(v) => `$${Number(v ?? 0).toLocaleString()}`} />
               </PieChart>
             </ResponsiveContainer>
           </div>
