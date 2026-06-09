@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack)",
+      "Bash(npm -v)",
+      "Bash(brew install *)",
+      "Read(//private/tmp/**)",
+      "Bash(curl -fsSL -o node.pkg \"https://nodejs.org/dist/v22.14.0/node-v22.14.0.pkg\")",
+      "Bash(open /tmp/node.pkg)",
+      "Bash(find ~ -path \"*Escorcia Music/Logos*\" -maxdepth 8 2>/dev/null | head -30)",
+      "Bash(cp '/Users/jkescorcia/Desktop/Escorcia Music/Logos/Escorcia Music/NEW/EM_ESCORCIA_MUSIC_NEW_LOGO_BLANCO.png' '/Users/jkescorcia/Claude/Projects/Dashboard - Escorcia Music/public/logo-blanco.png')",
+      "Bash(cp '/Users/jkescorcia/Desktop/Escorcia Music/Logos/Escorcia Music/NEW/EM_ESCORCIA_MUSIC_NEW_LOGO_NEGRO.png' '/Users/jkescorcia/Claude/Projects/Dashboard - Escorcia Music/public/logo-negro.png')",
+      "Bash(python3 -)",
+      "Bash(zip -r \"Dashboard-Escorcia-Music.zip\" \"Dashboard - Escorcia Music\" --exclude \"Dashboard - Escorcia Music/node_modules/*\" --exclude \"Dashboard - Escorcia Music/.next/*\")"
+    ]
+  }
+}
